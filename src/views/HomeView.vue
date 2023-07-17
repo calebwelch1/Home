@@ -10,13 +10,6 @@ export default {
   mounted() {
   },
   methods: {
-//     showabout(){
-//     $("#about_container").css("display","inherit");
-//     $("#about_container").addClass("animated slideInLeft");
-//     setTimeout(() => {
-//         $("#about_container").removeClass("animated slideInLeft");
-//     },800);
-// },
 },
   };
 </script>
