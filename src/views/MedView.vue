@@ -1,13 +1,23 @@
 <script lang="ts">
 import Dashboard from './Med/dashboard.vue';
+import History from './Med/history.vue';
+import Health from './Med/health.vue';
+import Profile from './Med/profile.vue';
+import Benefits from './Med/benefits.vue';
+
 
 export default {
     components : {
         Dashboard,
+        History,
+        Health,
+        Profile,
+        Benefits,
     },
   data() {
     return { 
-      showAbout:false,
+      currentView:'Dashboard',
+      viewlist: ['Dashboard', 'Profile', 'Health', 'History', 'Benefits'],
      }
   },
   mounted() { },
@@ -31,38 +41,38 @@ export default {
                     view_cozy
                 </span>
                 </div>
-                <p style="color:black; margin-left: 1rem; font-size: 1.3rem; font-weight: 300; margin-top: 0.45rem;">Current View</p>
+                <p style="color:black; margin-left: 1rem; font-size: 1.3rem; font-weight: 300; margin-top: 0.45rem;">{{currentView}}</p>
                 <p style="color:black; margin-left: 1rem; font-size: 2rem; margin-top:-0.4rem;">&#8964;</p>
                 <!-- TODO: make it dynamic! -->
             </div>
             <ul class="flex-list">
-                <li class="menu-item">
+                <li class="menu-item" @click="currentView = 'Dashboard'">
                     <span class="material-symbols-outlined position-menu-items">
                         home
                     </span>
                     <p class="position-menu-items position-menu-item-p">Home</p>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" @click="currentView = 'Health'">
                     <span class="material-symbols-outlined position-menu-items">
-                        home
+                        local_hospital
                     </span>
                     <p class="position-menu-items position-menu-item-p">Health</p>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" @click="currentView = 'Benefits'">
                     <span class="material-symbols-outlined position-menu-items">
-                        home
+                        payments
                     </span>
                     <p class="position-menu-items position-menu-item-p">Benefits</p>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" @click="currentView = 'History'">
                     <span class="material-symbols-outlined position-menu-items">
-                        home
+                        restart_alt
                     </span>
                     <p class="position-menu-items position-menu-item-p">History</p>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item" @click="currentView = 'Profile'">
                     <span class="material-symbols-outlined position-menu-items">
-                        home
+                        person
                     </span>
                     <p class="position-menu-items position-menu-item-p">Profile</p>
                 </li>
@@ -93,7 +103,11 @@ export default {
                 </span> 
                 </div>
             </div>
-            <Dashboard />
+            <Dashboard v-if="currentView === 'Dashboard'"/>
+            <Health v-if="currentView === 'Health'"/>
+            <Profile v-if="currentView === 'Profile'"/>
+            <History v-if="currentView === 'History'"/>
+            <Benefits v-if="currentView === 'Benefits'"/>
         </div>
     </div>
 </body>
