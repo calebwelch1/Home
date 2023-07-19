@@ -1,5 +1,4 @@
 <script lang="ts">
-import $ from 'jquery'
 
 export default {
   data() {
@@ -7,88 +6,7 @@ export default {
       showAbout:false,
      }
   },
-  mounted() {
-    var $slider = $('.slideshow .slider'),
-  maxItems = $('.item', $slider).length,
-  dragging = false,
-  tracking,
-  rightTracking;
-
-$sliderRight = $('.slideshow').clone().addClass('slideshow-right').appendTo($('.split-slideshow'));
-
-rightItems = $('.item', $sliderRight).toArray();
-reverseItems = rightItems.reverse();
-$('.slider', $sliderRight).html('');
-for (i = 0; i < maxItems; i++) {
-  $(reverseItems[i]).appendTo($('.slider', $sliderRight));
-}
-
-$slider.addClass('slideshow-left');
-$('.slideshow-left').slick({
-  vertical: true,
-  verticalSwiping: true,
-  arrows: false,
-  infinite: true,
-  dots: true,
-  speed: 1000,
-  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
-}).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-
-  if (currentSlide > nextSlide && nextSlide == 0 && currentSlide == maxItems - 1) {
-    $('.slideshow-right .slider').slick('slickGoTo', -1);
-    $('.slideshow-text').slick('slickGoTo', maxItems);
-  } else if (currentSlide < nextSlide && currentSlide == 0 && nextSlide == maxItems - 1) {
-    $('.slideshow-right .slider').slick('slickGoTo', maxItems);
-    $('.slideshow-text').slick('slickGoTo', -1);
-  } else {
-    $('.slideshow-right .slider').slick('slickGoTo', maxItems - 1 - nextSlide);
-    $('.slideshow-text').slick('slickGoTo', nextSlide);
-  }
-}).on("mousewheel", function(event) {
-  event.preventDefault();
-  if (event.deltaX > 0 || event.deltaY < 0) {
-    $(this).slick('slickNext');
-  } else if (event.deltaX < 0 || event.deltaY > 0) {
-    $(this).slick('slickPrev');
-  };
-}).on('mousedown touchstart', function(){
-  dragging = true;
-  tracking = $('.slick-track', $slider).css('transform');
-  tracking = parseInt(tracking.split(',')[5]);
-  rightTracking = $('.slideshow-right .slick-track').css('transform');
-  rightTracking = parseInt(rightTracking.split(',')[5]);
-}).on('mousemove touchmove', function(){
-  if (dragging) {
-    newTracking = $('.slideshow-left .slick-track').css('transform');
-    newTracking = parseInt(newTracking.split(',')[5]);
-    diffTracking = newTracking - tracking;
-    $('.slideshow-right .slick-track').css({'transform': 'matrix(1, 0, 0, 1, 0, ' + (rightTracking - diffTracking) + ')'});
-  }
-}).on('mouseleave touchend mouseup', function(){
-  dragging = false;
-});
-
-$('.slideshow-right .slider').slick({
-  swipe: false,
-  vertical: true,
-  arrows: false,
-  infinite: true,
-  speed: 950,
-  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-  initialSlide: maxItems - 1
-});
-$('.slideshow-text').slick({
-  swipe: false,
-  vertical: true,
-  arrows: false,
-  infinite: true,
-  speed: 900,
-  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
-});
-
-
-    
-  },
+  mounted() { },
   methods: {
 },
   };
@@ -99,29 +17,22 @@ $('.slideshow-text').slick({
     <html lang="en">
 <body>
   <div class="split-slideshow">
-  <div class="slideshow">
+    <img class="img-one" src="https://images.pexels.com/photos/17349974/pexels-photo-17349974/free-photo-of-light-art-pattern-texture.jpeg" />
+    <img class="img-two" src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+  <!-- <div class="slideshow">
     <div class="slider">
       <div class="item">
-        <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-2.jpg" />
+        <img class="img-one" src="https://images.pexels.com/photos/17349974/pexels-photo-17349974/free-photo-of-light-art-pattern-texture.jpeg" />
+        <img class="img-two" src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
       </div>
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-3.jpg" />
-      </div>
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-4.jpg" />
-      </div>
-      <div class="item">
-        <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-1.jpg" />
-      </div>
-    </div>
+    </div> -->
   </div>
   <div class="slideshow-text">
-    <div class="item">Canyon</div>
-    <div class="item">Desert</div>
-    <div class="item">Erosion</div>
-    <div class="item">Shape</div>
+    <div style="cursor:pointer !important;" class="item" @click="$router.push('med')">Canyon</div>
+    <div style="cursor:pointer !important;" class="item" @click="$router.push('Shop')">Desert</div>
+    <div style="cursor:pointer !important;" class="item" @click="$router.push('Shop')">Erosion</div>
+    <div style="cursor:pointer !important;" class="item" @click="$router.push('Shop')">Shape</div>
   </div>
-</div>
 </body>
 </html>
   </main>
@@ -135,110 +46,27 @@ html {
   overflow: hidden;
 }
 
-.slideshow {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  
-  .slider {
-    width: 100vw;
-    height: 100vw;
-    z-index: 2;
-    
-    * {
-      outline: none;
-    }
-    
-    .item {
-      height: 100vh;
-      width: 100vw;
-      position: relative;
-      overflow: hidden;
-      border: none;
-      
-      .text {
-        display: none;
-      }
-      
-      img {
+.split-slideshow {
+  position: relative;
+}
+.img-one {
         min-width: 101%;
         min-height: 101%;
         position: absolute;
-        top: 50%;
+        top: 100%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-100%, -0%);
+        z-index: 2;
       }
-    }
-  }
-  
-  .slick-dots {
-    position: fixed;
-    z-index: 100;
-    width: 40px;
-    height: auto;
-    bottom: auto;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    left: auto;
-    color: #fff;
-    display: block;
-    
-    li {
-      display: block;
-      width: 100%;
-      height: auto;
-      
-      & button {
-        position: relative;
-        width: 20px;
-        height: 15px;
-        text-align: center;
-        
-        &:before {
-          content: '';
-          background: #fff;
-          color: #fff;
-          height: 2px;
-          width: 20px;
-          border-radius: 0;
-          position: absolute;
-          top: 50%;
-          right: 0;
-          left: auto;
-          transform: translateY(-50%);
-          transition: all .3s ease-in-out;
-          opacity: 0.6;
-        }
+
+.img-two {
+        min-width: 101%;
+        min-height: 101%;
+        position: absolute;
+        top: 100%;
+        right: 50%;
+        transform: translate(100%, 0%);
       }
-      
-      &.slick-active {
-        button {
-          &:before {
-            width: 40px;
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-  
-  &.slideshow-right {
-    left: 0;
-    z-index: 1;
-    width: 50vw;
-    pointer-events: none;
-    
-    .slider {
-      left: 0;
-      position: absolute;
-    }
-  }
-}
 
 .slideshow-text {
   position: absolute;
@@ -252,10 +80,10 @@ html {
   color: #fff;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 100;
-  pointer-events: none;
   text-transform: uppercase;
   letter-spacing: 20px;
   line-height: 0.8;
+  cursor: pointer;
   
   @media (max-width: 767px) {
     font-size: 40px;
@@ -263,6 +91,9 @@ html {
   
 }
 
+.item {
+  cursor: pointer;
+}
 
 .the-most {
   position: fixed;
