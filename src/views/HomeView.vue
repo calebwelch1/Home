@@ -28,10 +28,10 @@ export default {
     </div> -->
   </div>
   <div class="slideshow-text">
-    <div class="item" @click="$router.push('med')">Canyon</div>
-    <div class="item" @click="$router.push('Shop')">Desert</div>
-    <div class="item" @click="$router.push('Shop')">Erosion</div>
-    <div class="item" @click="$router.push('Shop')">Shape</div>
+    <div class="item" @click="$router.push('med')">Health</div>
+    <div style="pointer-events: none;" class="item crossed-out-blur">Canyon</div>
+    <div style="pointer-events: none;" class="item crossed-out-blur">Erosion</div>
+    <div style="pointer-events: none;" class="item crossed-out-blur">Fast & Slow</div>
   </div>
 </body>
 </html>
@@ -83,7 +83,6 @@ html {
   text-transform: uppercase;
   letter-spacing: 20px;
   line-height: 0.8;
-  cursor: pointer;
   
   @media (max-width: 767px) {
     font-size: 40px;
@@ -93,6 +92,7 @@ html {
 
 .item {
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .the-most {
@@ -107,6 +107,14 @@ html {
   img {
     max-width: 100%;
   }
+}
+
+.crossed-out-blur {
+  /* Add a text-decoration line to cross out the word */
+  text-decoration: line-through;
+
+  /* Add a white text-shadow to simulate a blur effect */
+  text-shadow: 0 0 5px white;
 }
 </style>
 
