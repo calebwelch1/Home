@@ -28,10 +28,10 @@ export default {
     </div> -->
   </div>
   <div class="slideshow-text">
-    <div style="cursor:pointer !important;" class="item" @click="$router.push('med')">Canyon</div>
-    <div style="cursor:pointer !important;" class="item" @click="$router.push('Shop')">Desert</div>
-    <div style="cursor:pointer !important;" class="item" @click="$router.push('Shop')">Erosion</div>
-    <div style="cursor:pointer !important;" class="item" @click="$router.push('Shop')">Shape</div>
+    <div class="item" @click="$router.push('med')">Canyon</div>
+    <div class="item" @click="$router.push('Shop')">Desert</div>
+    <div class="item" @click="$router.push('Shop')">Erosion</div>
+    <div class="item" @click="$router.push('Shop')">Shape</div>
   </div>
 </body>
 </html>

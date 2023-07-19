@@ -179,25 +179,7 @@ body {
     overflow-y:auto;
     display:none;
 }
-.container div {
-    font-size:25px;
-    margin:20px 0px;
-    transition:0.4s ease-in-out;
-}
-.container div:hover {
-    cursor:pointer;
-}
-.container section {
-    margin:8vh 0px;
-}
-#used div{
-    font-size:14px !important;
-    display:inline-block;
-    padding:8px 10px;
-    border:2px solid #fff;
-    margin:0px 10px;
-    border-radius:50px;
-}
+
 #used:hover {
     cursor:text;
 }
