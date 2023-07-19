@@ -22,7 +22,9 @@ export default {
 <body>
     <div class="container">
         <div class="first-div">
-            <h1 style="color:#fc2e20; padding-left: 40px; font-size: 2.8rem;">MyHealth+</h1>
+            <!--  -->
+            <div class="I AM THE SPACER!!!!" style="height: 2vh;" />
+            <!--  -->
             <div class="drop-shadow-xl" style="margin-left: 20px; background: #fff; border-radius: 1rem; width: 85%; display:flex; flex-direction: row; padding-top: 1rem; padding-bottom: 1rem;">
                 <div style="background:#fc2e20; border-radius: .5rem; width: 2.5rem; height: 2.5rem;margin-left: 20px;">
                 <span class="material-symbols-outlined" style="margin-top: 0.25rem; margin-left: 0.25rem;">
@@ -65,8 +67,32 @@ export default {
                     <p class="position-menu-items position-menu-item-p">Profile</p>
                 </li>
             </ul>
+            <!--  -->
+            <div class="I AM THE SPACER!!!!" style="height: 38vh;" />
+            <!--  -->
+            <div style="position: relative;">
+            <p style="color: black; position: absolute; top: -10%; right: 13%; font-size: 14px; font-weight: 600;">tm</p>
+            <h1 style="color:#fc2e20; padding-left: 40px; font-size: 2.8rem;">MyHealth+</h1>
+            </div>
         </div>
         <div class="second-div">
+            <div style="background: #f7f7f7; height: 7rem; display: flex; flex-direction:row;">
+                <div style="position: relative;">
+                <p style="color: black; position: absolute; top: 10%; right: -2%; font-size: 14px; font-weight: 600;">tm</p>
+                <h1 style="color:#fc2e20; padding-left: 40px; font-size: 2.8rem;">MyHealth+</h1>
+                </div>
+                <!--  -->
+                <div style="display: flex; flex-direction: row; margin-left: 65%; margin-top: 2.5%; margin-bottom: 2.5%;">
+                <span class="material-symbols-outlined" style="color: #545454;">
+                person
+                </span>
+                <p style="color:#545454; margin-left: 1rem; margin-right: 1rem; font-size: 1.3rem; margin-top: 3%;">Guest</p>
+                <p style="color:#545454; margin-left: -10px; margin-right: 1rem; font-size: 2.2rem; margin-top: -5%;">&#8964;</p>
+                <span class="material-symbols-outlined" style="color: #545454; margin-top: 1%;">
+                notifications
+                </span> 
+                </div>
+            </div>
             <Dashboard />
         </div>
     </div>
@@ -92,6 +118,7 @@ p {
   height: 100%;
   width: 100%;
   padding: 0px;
+  overflow: hidden;
 }
 
 .first-div {
