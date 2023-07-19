@@ -22,7 +22,17 @@ export default {
 <body>
     <div class="container">
         <div class="first-div">
-            <div>CURRENT VIEW</div>
+            <h1 style="color:#fc2e20; padding-left: 40px; font-size: 2.8rem;">MyHealth+</h1>
+            <div class="drop-shadow-xl" style="margin-left: 20px; background: #fff; border-radius: 1rem; width: 85%; display:flex; flex-direction: row; padding-top: 1rem; padding-bottom: 1rem;">
+                <div style="background:#fc2e20; border-radius: .5rem; width: 2.5rem; height: 2.5rem;margin-left: 20px;">
+                <span class="material-symbols-outlined" style="margin-top: 0.25rem; margin-left: 0.25rem;">
+                    view_cozy
+                </span>
+                </div>
+                <p style="color:black; margin-left: 1rem; font-size: 1.3rem; font-weight: 300; margin-top: 0.45rem;">Current View</p>
+                <p style="color:black; margin-left: 1rem; font-size: 2rem; margin-top:-0.4rem;">&#8964;</p>
+                <!-- TODO: make it dynamic! -->
+            </div>
             <ul class="flex-list">
                 <li class="menu-item">
                     <span class="material-symbols-outlined position-menu-items">
@@ -158,5 +168,9 @@ p {
     position: absolute;
     top: 50%;
     left: 10%;
+}
+
+.drop-shadow-xl {
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 </style>
