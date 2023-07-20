@@ -16,7 +16,7 @@ export default {
     <div class="dashboard">
         <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">HEALTH</h2>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 8%; color: black; border-radius: 1rem; width: 38rem; height: 25rem; display: flex; flex-direction: column;">
+        style="left: 3%; top: 8%; color: black; border-radius: 1rem; width: 40%; height: 25rem; display: flex; flex-direction: column;">
         <div style="padding-left: 20%">
         <p style="color: black; font-size: 2rem;">Medications</p>
         <p style="color: black; font-size: 1.5rem; margin-top: 12rem;">Your Pharmacy: Walreds</p>
@@ -25,7 +25,7 @@ export default {
         </div>
         </div>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 47%; top: 8%; color: black; border-radius: 1rem; width: 40.9rem; height: 25rem; display: flex; flex-direction: column;">
+        style="left: 47%; top: 8%; color: black; border-radius: 1rem; width: 42%; height: 25rem; display: flex; flex-direction: column;">
             <div style="padding-left: 20%">
             <p style="color: black; font-size: 2rem;">Your Doctor</p>
             <p style="color: black; font-size: 1.5rem; margin-top: 12rem;">Your Pharmacy: Walreds</p>
@@ -34,7 +34,7 @@ export default {
             </div>
         </div>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 53%; color: black; border-radius: 1rem; width: 83rem; height: 15rem; display: flex; flex-direction: row;">
+        style="left: 3%; top: 53%; color: black; border-radius: 1rem; width: 86%; height: 15rem; display: flex; flex-direction: row;">
         <div style="flex:25; background:red; display:flex; flex-direction: column;">Schedule a visit</div>
         <div style="flex:25; background:blue; display:flex; flex-direction: column;">Manage medications</div>
         <div style="flex:25; background:green; display:flex; flex-direction: column;">View Health Outcomes</div>

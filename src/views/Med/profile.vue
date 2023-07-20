@@ -16,7 +16,7 @@ export default {
     <div class="dashboard">
         <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Profile</h2>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 4%; top: 7%; color: black; border-radius: 1rem; width: 85rem; height: 45rem;">
+        style="left: 4%; top: 7%; color: black; border-radius: 1rem; width: 88%; height: 45rem;">
             footer
         </div>
     </div>
