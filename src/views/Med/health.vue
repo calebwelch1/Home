@@ -15,38 +15,31 @@ export default {
 <template>
     <div class="dashboard">
         <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">HEALTH</h2>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 10%">
-        1
+        <div class="drop-shadow-xl absolute tag-card"
+        style="left: 3%; top: 8%; color: black; border-radius: 1rem; width: 38rem; height: 25rem; display: flex; flex-direction: column;">
+        <div style="padding-left: 20%">
+        <p style="color: black; font-size: 2rem;">Medications</p>
+        <p style="color: black; font-size: 1.5rem; margin-top: 12rem;">Your Pharmacy: Walreds</p>
+        <p style="color: black; font-size: 1.5rem;">medication 1: refill ---</p>
+        <p style="color: black; font-size: 1.5rem;">medication 2: refill ---</p>
         </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 24%; top: 10%">
-        2
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 21%">
-        3
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 24%; top: 21%">
-        4
         </div>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 36%; color: black; border-radius: 1rem; width: 38rem; height: 16rem;">
-            big
+        style="left: 47%; top: 8%; color: black; border-radius: 1rem; width: 40.9rem; height: 25rem; display: flex; flex-direction: column;">
+            <div style="padding-left: 20%">
+            <p style="color: black; font-size: 2rem;">Your Doctor</p>
+            <p style="color: black; font-size: 1.5rem; margin-top: 12rem;">Your Pharmacy: Walreds</p>
+            <p style="color: black; font-size: 1.5rem;">medication 1: refill ---</p>
+            <p style="color: black; font-size: 1.5rem;">medication 2: refill ---</p>
+            </div>
         </div>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 50%; top: 10%; color: black; border-radius: 1rem; width: 38rem; height: 32rem;">
-            big 2
-        </div>
-        <div class="drop-shadow-xl absolute tag-card"
-        style="left: 20%; top: 65.5%; color: black; border-radius: 1rem; width: 50rem; height: 10rem;">
-            footer
-        </div>
+        style="left: 3%; top: 53%; color: black; border-radius: 1rem; width: 83rem; height: 15rem; display: flex; flex-direction: row;">
+        <div style="flex:25; background:red; display:flex; flex-direction: column;">Schedule a visit</div>
+        <div style="flex:25; background:blue; display:flex; flex-direction: column;">Manage medications</div>
+        <div style="flex:25; background:green; display:flex; flex-direction: column;">View Health Outcomes</div>
+        <div style="flex:25; background:yellow; display:flex; flex-direction: column;">Call US</div>
+    </div>
     </div>
 </template>
 <style lang="scss">

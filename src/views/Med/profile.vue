@@ -15,36 +15,8 @@ export default {
 <template>
     <div class="dashboard">
         <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Profile</h2>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 10%">
-        1
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 24%; top: 10%">
-        2
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 21%">
-        3
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 24%; top: 21%">
-        4
-        </div>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 36%; color: black; border-radius: 1rem; width: 38rem; height: 16rem;">
-            big
-        </div>
-        <div class="drop-shadow-xl absolute tag-card"
-        style="left: 50%; top: 10%; color: black; border-radius: 1rem; width: 38rem; height: 32rem;">
-            big 2
-        </div>
-        <div class="drop-shadow-xl absolute tag-card"
-        style="left: 20%; top: 65.5%; color: black; border-radius: 1rem; width: 50rem; height: 10rem;">
+        style="left: 4%; top: 7%; color: black; border-radius: 1rem; width: 85rem; height: 45rem;">
             footer
         </div>
     </div>
