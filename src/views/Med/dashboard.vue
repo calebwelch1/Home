@@ -47,7 +47,55 @@ export default {
         </div>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 3%; top: 36%; color: black; border-radius: 1rem; width: 39%; height: 16rem;">
-            big
+          <div id="health-notification-container" style="margin-left: 5%; margin-top: 5%; width: 90%; height: 74%; position: relative; background: #f7f7f7; border-radius: 1rem; overflow-y: scroll; overflow-x: hidden;">
+            <div @click="$emit('switchView', 'Health')" class="health-notification">
+              <div class="brand-gradient" style="border-radius: 1rem; width: 2.3rem; height: 2.3rem; margin-top: 0.4%;">
+                <span class="material-symbols-outlined" style="font-size: 0.8rem; margin-top: 2%; margin-left: 2%; color: #fff;">
+                  science
+                </span>
+            </div>
+            <p style="font-size: 1rem; padding-top: 2.5%;">
+                  You have new or modified test results.
+            </p>
+            <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">View Results</button>
+            </div>
+            <!--  -->
+            <div @click="$emit('switchView', 'Health')" class="health-notification">
+              <div class="brand-gradient" style="border-radius: 1rem; width: 2.3rem; height: 2.3rem; margin-top: 0.4%;">
+                <span class="material-symbols-outlined" style="font-size: 0.8rem; margin-top: 2%; margin-left: 2%; color: #fff;">
+                  pill
+                </span>
+            </div>
+            <p style="font-size: 1rem; padding-top: 2.5%;">
+                  Medications available for refill.
+            </p>
+            <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">Medication</button>
+            </div>
+            <!--  -->
+            <div @click="$emit('switchView', 'Health')" class="health-notification">
+              <div class="brand-gradient" style="border-radius: 1rem; width: 2.3rem; height: 2.3rem; margin-top: 0.4%;">
+                <span class="material-symbols-outlined" style="font-size: 0.8rem; margin-top: 2%; margin-left: 2%; color: #fff;">
+                  science
+                </span>
+            </div>
+            <p style="font-size: 1rem; padding-top: 2.5%;">
+                  You have new or modified test results.
+            </p>
+            <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">View Results</button>
+            </div>
+            <!--  -->
+            <div @click="$emit('switchView', 'Health')" class="health-notification">
+              <div class="brand-gradient" style="border-radius: 1rem; width: 2.3rem; height: 2.3rem; margin-top: 0.4%;">
+                <span class="material-symbols-outlined" style="font-size: 0.8rem; margin-top: 2%; margin-left: 2%; color: #fff;">
+                  science
+                </span>
+            </div>
+            <p style="font-size: 1rem; padding-top: 2.5%;">
+                  You have new or modified test results.
+            </p>
+            <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">View Results</button>
+            </div>
+          </div>
         </div>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 50%; top: 10%; color: black; border-radius: 1rem; width: 39%; height: 50%;">
@@ -192,5 +240,20 @@ html {
 .active {
     background-color: #27ae60;
     border: 3px solid #27ae60;
+}
+
+.health-notification {
+  border: 1px solid #f7f7f7;
+  display: flex; flex-direction: row;
+  width: 100%;
+  height: 29%;
+  gap: 6%;
+  padding-top: 1%;
+  border-radius: 1rem;
+}
+
+.health-notification:hover {
+  border: 1px solid #b5b5b5;
+  cursor: pointer;
 }
 </style>

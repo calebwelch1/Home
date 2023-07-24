@@ -103,7 +103,7 @@ export default {
                 </span> 
                 </div>
             </div>
-            <Dashboard v-if="currentView === 'Dashboard'"/>
+            <Dashboard v-if="currentView === 'Dashboard'" @switch-view="(view) => currentView = view"/>
             <Health v-if="currentView === 'Health'"/>
             <Profile v-if="currentView === 'Profile'"/>
             <History v-if="currentView === 'History'"/>
