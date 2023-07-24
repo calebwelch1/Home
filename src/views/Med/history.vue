@@ -18,7 +18,7 @@ export default {
         <div
         class="drop-shadow-xl absolute tag-card"
         style="left: 3%; top: 10%; width: 18%;">
-        1
+
         </div>
         <div
         class="drop-shadow-xl absolute tag-card"

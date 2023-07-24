@@ -18,7 +18,17 @@ export default {
         <div
         class="drop-shadow-xl absolute tag-card"
         style="left: 3%; top: 10%; width: 18%;">
-        1
+        <div style="display: flex; flex-direction: row; width: 100%; padding-left: 10%; padding-right: auto; padding-top: 7%; padding-bottom: 5%;">
+            <div style="display: flex; flex-direction: column;">
+                <p style="color: black; margin-top: -5%; font-size: 1.2rem; font-weight: 500; color:#3b3b3b"> Your Account</p>
+                <p style="color: black; margin-top: 5%; font-size: 1.2rem;"> $7251.43</p>
+            </div>
+            <div class="brand-gradient" style="border-radius: .5rem; width: 3.1rem; height: 3.1rem; margin-left: 24%; margin-top: -2%;">
+                <span class="material-symbols-outlined" style="margin-top: 15%; margin-left: 18%; color: #fff;">
+                    view_cozy
+                </span>
+            </div>
+        </div>
         </div>
         <div
         class="drop-shadow-xl absolute tag-card"
@@ -99,5 +109,10 @@ html {
     // width: 18rem;
     // width: 1%;
     height: 5rem;
+}
+
+.brand-gradient {
+  background: rgb(255,27,24);
+  background: linear-gradient(342deg, rgba(255,27,24,1) 0%, rgba(255,149,0,1) 100%, rgba(0,212,255,1) 100%);
 }
 </style>

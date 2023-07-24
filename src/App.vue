@@ -80,4 +80,8 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 } */
+.brand-gradient {
+  background: rgb(255,27,24);
+  background: linear-gradient(342deg, rgba(255,27,24,1) 0%, rgba(255,149,0,1) 100%, rgba(0,212,255,1) 100%);
+}
 </style>

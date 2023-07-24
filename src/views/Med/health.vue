@@ -1,9 +1,11 @@
 <script lang="ts">
+import doctor from './healthcare-provider-portrait.jpg';
 
 export default {
   data() {
     return { 
       showAbout:false,
+      doctor,
      }
   },
   mounted() { },
@@ -28,6 +30,7 @@ export default {
         style="left: 47%; top: 8%; color: black; border-radius: 1rem; width: 42%; height: 25rem; display: flex; flex-direction: column;">
             <div style="padding-left: 20%">
             <p style="color: black; font-size: 2rem;">Your Doctor</p>
+            <img :src="doctor" style="height: 35%; width: 48%;"/>
             <p style="color: black; font-size: 1.5rem; margin-top: 12rem;">Your Pharmacy: Walreds</p>
             <p style="color: black; font-size: 1.5rem;">medication 1: refill ---</p>
             <p style="color: black; font-size: 1.5rem;">medication 2: refill ---</p>
