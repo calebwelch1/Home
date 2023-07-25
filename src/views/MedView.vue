@@ -4,6 +4,7 @@ import History from './Med/history.vue';
 import Health from './Med/health.vue';
 import Profile from './Med/profile.vue';
 import Benefits from './Med/benefits.vue';
+import Messages from './Med/messages.vue';
 
 
 export default {
@@ -13,11 +14,12 @@ export default {
         Health,
         Profile,
         Benefits,
+        Messages,
     },
   data() {
     return { 
       currentView:'Dashboard',
-      viewlist: ['Dashboard', 'Profile', 'Health', 'History', 'Benefits'],
+      viewlist: ['Dashboard', 'Profile', 'Health', 'History', 'Benefits', 'Messages'],
      }
   },
   mounted() { },
@@ -58,6 +60,12 @@ export default {
                     </span>
                     <p class="position-menu-items position-menu-item-p">Health</p>
                 </li>
+                <li class="menu-item" @click="currentView = 'Messages'">
+                    <span class="material-symbols-outlined position-menu-items">
+                        mail
+                    </span>
+                    <p class="position-menu-items position-menu-item-p">Messages</p>
+                </li>
                 <li class="menu-item" @click="currentView = 'Benefits'">
                     <span class="material-symbols-outlined position-menu-items">
                         payments
@@ -78,7 +86,7 @@ export default {
                 </li>
             </ul>
             <!--  -->
-            <div class="I AM THE SPACER!!!!" style="height: 38vh;" />
+            <div class="I AM THE SPACER!!!!" style="height: 33vh;" />
             <!--  -->
             <div style="position: relative;">
             <p style="color: black; position: absolute; top: -10%; right: 13%; font-size: 14px; font-weight: 600;">tm</p>
@@ -108,6 +116,7 @@ export default {
             <Profile v-if="currentView === 'Profile'"/>
             <History v-if="currentView === 'History'"/>
             <Benefits v-if="currentView === 'Benefits'"/>
+            <Messages v-if="currentView === 'Messages'"/>
         </div>
     </div>
 </body>

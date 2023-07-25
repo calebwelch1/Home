@@ -14,18 +14,19 @@ export default {
 
 <template>
     <div class="dashboard">
-        <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Your Health Statistics</h2>
+        <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0%; padding-top: 2%">MyHealth Dashboard</h2>
         <div
         class="drop-shadow-xl absolute tag-card"
         style="left: 3%; top: 10%; width: 18%;">
-        <div style="display: flex; flex-direction: row; width: 85%; padding-left: 10%; padding-right: 10%; padding-top: 7%; padding-bottom: 5%;">
-            <div style="display: flex; flex-direction: column;">
-                <p style="color: black; margin-top: -5%; font-size: 1.2rem; font-weight: 500; color:#3b3b3b"> Your Account</p>
+        <div style="display: flex; flex-direction: row; width: 80%; padding-left: 10%; padding-right: 10%; padding-top: 7%; padding-bottom: 5%;">
+            <div style="display: flex; flex-direction: column; position: relative; flex-grow: 1;">
+                <p style="color: black; margin-top: -5%; font-size: 1.2rem; font-weight: 500; color:#3b3b3b">Balance</p>
                 <p style="color: black; margin-top: 5%; font-size: 1.2rem;"> $7251.43</p>
+                <!-- <p style="color: #4cc650; margin-top: 5%; font-size: 1.2rem; position: absolute; bottom: 4%; right: -25%;"> +27%</p> -->
             </div>
             <div class="brand-gradient" style="border-radius: .5rem; width: 3.1rem; height: 3.1rem; margin-left: 23%; margin-top: -2%;">
                 <span class="material-symbols-outlined" style="margin-top: 15%; margin-left: 18%; color: #fff;">
-                    view_cozy
+                    payments
                 </span>
             </div>
         </div>
@@ -33,17 +34,49 @@ export default {
         <div
         class="drop-shadow-xl absolute tag-card"
         style="left: 24%; top: 10%; width: 18%;">
-        2
+        <div @click="$emit('switchView', 'Messages')" style="display: flex; flex-direction: row; width: 80%; padding-left: 10%; padding-right: 10%; padding-top: 7%; padding-bottom: 5%; cursor: pointer;">
+            <div style="display: flex; flex-direction: column; position: relative; flex-grow: 1;">
+                <p style="color: black; margin-top: -5%; font-size: 1.2rem; font-weight: 500; color:#3b3b3b">Messages</p>
+                <p style="color: black; margin-top: 5%; font-size: 1.2rem;"> 2 Messages</p>
+            </div>
+            <div class="brand-gradient" style="border-radius: .5rem; width: 3.1rem; height: 3.1rem; margin-left: 23%; margin-top: -2%;">
+                <span class="material-symbols-outlined" style="margin-top: 15%; margin-left: 18%; color: #fff;">
+                    mail
+                </span>
+            </div>
+        </div>
         </div>
         <div
         class="drop-shadow-xl absolute tag-card"
         style="left: 3%; top: 21%; width: 18%;">
-        3
+        <div @click="$emit('switchView', 'Health')" style="display: flex; flex-direction: row; width: 80%; padding-left: 10%; padding-right: 10%; padding-top: 7%; padding-bottom: 5%; cursor: pointer;">
+            <div style="display: flex; flex-direction: column; position: relative; flex-grow: 1;">
+                <p style="color: black; margin-top: -5%; font-size: 1.2rem; font-weight: 500; color:#3b3b3b">Medication</p>
+                <p style="color: black; margin-top: 5%; font-size: 1.2rem;"> 4 Refills</p>
+                <!-- <p style="color: #4cc650; margin-top: 5%; font-size: 1.2rem; position: absolute; bottom: 4%; right: -25%;"> +27%</p> -->
+            </div>
+            <div class="brand-gradient" style="border-radius: .5rem; width: 3.1rem; height: 3.1rem; margin-left: 23%; margin-top: -2%;">
+                <span class="material-symbols-outlined" style="margin-top: 15%; margin-left: 18%; color: #fff;">
+                    pill
+                </span>
+            </div>
+        </div>
         </div>
         <div
         class="drop-shadow-xl absolute tag-card"
         style="left: 24%; top: 21%; width: 18%;">
-        4
+        <div @click="$emit('switchView', 'Health')" style="display: flex; flex-direction: row; width: 80%; padding-left: 10%; padding-right: 10%; padding-top: 7%; padding-bottom: 5%; cursor: pointer;">
+            <div style="display: flex; flex-direction: column; position: relative; flex-grow: 1;">
+                <p style="color: black; margin-top: -5%; font-size: 1.2rem; font-weight: 500; color:#3b3b3b">Test Results</p>
+                <p style="color: black; margin-top: 5%; font-size: 1.2rem;"> 3 Results</p>
+                <!-- <p style="color: #4cc650; margin-top: 5%; font-size: 1.2rem; position: absolute; bottom: 4%; right: -25%;"> +27%</p> -->
+            </div>
+            <div class="brand-gradient" style="border-radius: .5rem; width: 3.1rem; height: 3.1rem; margin-left: 23%; margin-top: -2%;">
+                <span class="material-symbols-outlined" style="margin-top: 15%; margin-left: 18%; color: #fff;">
+                    science
+                </span>
+            </div>
+        </div>
         </div>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 3%; top: 36%; color: black; border-radius: 1rem; width: 39%; height: 16rem;">
@@ -54,7 +87,7 @@ export default {
                   science
                 </span>
             </div>
-            <p style="font-size: 1rem; padding-top: 2.5%;">
+            <p style="font-size: 1rem; padding-top: 2.5%; width: 50%;">
                   You have new or modified test results.
             </p>
             <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">View Results</button>
@@ -66,22 +99,22 @@ export default {
                   pill
                 </span>
             </div>
-            <p style="font-size: 1rem; padding-top: 2.5%;">
+            <p style="font-size: 1rem; padding-top: 2.5%; width: 50%;">
                   Medications available for refill.
             </p>
             <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">Medication</button>
             </div>
             <!--  -->
-            <div @click="$emit('switchView', 'Health')" class="health-notification">
+            <div @click="$emit('switchView', 'Benefits')" class="health-notification">
               <div class="brand-gradient" style="border-radius: 1rem; width: 2.3rem; height: 2.3rem; margin-top: 0.4%;">
                 <span class="material-symbols-outlined" style="font-size: 0.8rem; margin-top: 2%; margin-left: 2%; color: #fff;">
-                  science
+                  payments
                 </span>
             </div>
-            <p style="font-size: 1rem; padding-top: 2.5%;">
-                  You have new or modified test results.
+            <p style="font-size: 1rem; padding-top: 2.5%; width: 50%;">
+                  View your new benefits.
             </p>
-            <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">View Results</button>
+            <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">View Benefits</button>
             </div>
             <!--  -->
             <div @click="$emit('switchView', 'Health')" class="health-notification">
@@ -90,7 +123,7 @@ export default {
                   science
                 </span>
             </div>
-            <p style="font-size: 1rem; padding-top: 2.5%;">
+            <p style="font-size: 1rem; padding-top: 2.5%; width: 50%;">
                   You have new or modified test results.
             </p>
             <button style="color: #fff; width: 28%; height: 36%; border-radius: 0.25rem; font-size: 1rem; font-weight: 600; border: none; background:#fc2e20; margin-top: 2.5%;">View Results</button>
