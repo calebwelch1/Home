@@ -151,7 +151,17 @@ export default {
         </div>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 20%; top: 66%; color: black; border-radius: 1rem; width: 54%; height: 10rem;">
-            footer
+        <div style="display: flex; flex-direction: row; width: 100%; padding-left: 0%; padding-right: 10%; padding-top: 7%; padding-bottom: 5%; border: 1px solid red;">
+          <div class="brand-gradient" style="border-radius: .5rem; width: 3.1rem; height: 3.1rem; margin-left: 23%; margin-top: -2%;">
+                <span class="material-symbols-outlined" style="margin-top: 15%; margin-left: 18%; color: #fff;">
+                    breaking_news
+                </span>
+            </div>
+            <div style="display: flex; flex-direction: column; position: relative; flex-grow: 1;">
+                <p style="color: black; font-size: 1.2rem;"> At vero eos et accusamus et iusto odio <br> dignissimos ducimus qui blanditiis praesentium </p>
+                <!-- <p style="color: #4cc650; margin-top: 5%; font-size: 1.2rem; position: absolute; bottom: 4%; right: -25%;"> +27%</p> -->
+            </div>
+        </div>
         </div>
     </div>
 </template>

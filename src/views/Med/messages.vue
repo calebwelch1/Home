@@ -17,9 +17,16 @@ export default {
         <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Messages</h2>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 4%; top: 7%; color: black; border-radius: 1rem; width: 88%; height: 45rem;">
-            footer
+          <div style="display:flex; height: 90%; width: 90%; margin-left: 5%; margin-top: 2.5%;">
+            <div style="flex: 30; background: #fff; width: 100%; height: 100%;"></div>
+            <div style="flex: 70; background: #7d7d7d;; width: 100%; height: 100%;">
+              <div>
+                
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+    </div>blueviolet
 </template>
 <style lang="scss">
 body,
