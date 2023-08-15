@@ -1,0 +1,1 @@
+when building art portfolio reference this site: https://www.roymendl.com/portraits/
