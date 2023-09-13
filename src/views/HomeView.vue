@@ -21,7 +21,10 @@ export default {
     },
     routeCC() {
       window.open('https://calebwelch1.github.io/c-collection'); 
-    }
+    },
+    routeLittleLemon() {
+      window.open('https://github.com/calebwelch1/little-lemon-react-native'); 
+    },
   },
   };
 </script>
@@ -55,6 +58,22 @@ export default {
       </div>
     </div>
     <div style=" background: white; display: flex; flex-direction: column; height: 78vh; overflow-y: scroll; overflow-x:hidden;">
+      <div class="project-container" style="">
+        <div v-if="windowWidth > 1360" class="project-image-container" style="">
+        <div class="diagonal-square-yellow project-gradient-square-size"/>
+        <img src="./littleLemon.png" class="drop-shadow-xl project-image-position" style=""/>
+        </div>
+        <div v-else>
+          <!-- <img src="./myhealth.png" class="drop-shadow-xl" style="height:60vh; width:75vw;"/> -->
+          <img src="./littleLemon.png" class="drop-shadow-xl project-image-position" style=""/>
+        </div>
+        <!-- <div class="diagonal-square" style="flex:40;"></div> -->
+        <div class="project-text-container" style="">
+          <h3 style="font-size: 2rem;">Little Lemon React Natice</h3>
+        <p style="font-size:1.5rem; margin-bottom: 2%;">Little Lemon is a React Native project for the fictional Chicago Restuarant of the same name. This project showcases my abilities to create cross platform mobile applications ( Android and iOS ) from start to finish. From Figma wireframes to authentication and login, rendering restuarant items with asynchronous calls and storing application information in databases sucha s AsyncStorage and SQLite - Little Lemon is a comprehensive application and a testament to my continuous growth in software.</p>
+        <button class="portfolio-button" @click="routeLittleLemon">Visit</button>
+        </div>
+      </div>
       <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square project-gradient-square-size"/>
@@ -262,6 +281,28 @@ background: linear-gradient(135deg, rgba(77,203,221,1) 0%, rgba(12,40,215,1) 100
 background: linear-gradient(135deg, rgba(77,203,221,1) 0%, rgba(12,40,215,1) 100%, rgba(210,41,41,1) 100%);
     clip-path: polygon(0 0%, 100% 0, 0 100%, 0 100%);
 }
+
+.diagonal-square-yellow {
+  position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0%, 100% 0, 0 100%, 0 100%);
+    background: #CFBE53;
+background: linear-gradient(to right, #CFBE53 0%, #CFFF30 30%, #A4FF54 60%, #82CF97 100%);
+}
+
+.diagonal-square-yellow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: #CFBE53;
+background: linear-gradient(to right, #CFBE53 0%, #CFFF30 30%, #A4FF54 60%, #82CF97 100%);
+    clip-path: polygon(0 0%, 100% 0, 0 100%, 0 100%);
+}
+
 
 .drop-shadow-xl {
     filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
