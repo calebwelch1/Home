@@ -22,6 +22,9 @@ export default {
     routeCC() {
       window.open('https://calebwelch1.github.io/c-collection'); 
     },
+    routePortfolio() {
+      window.open('https://calebwelch1.github.io/art'); 
+    },
     routeLittleLemon() {
       window.open('https://github.com/calebwelch1/little-lemon-react-native'); 
     },
@@ -60,6 +63,21 @@ export default {
     <div style=" background: white; display: flex; flex-direction: column; height: 78vh; overflow-y: scroll; overflow-x:hidden;">
       <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
+        <div class="diagonal-square-brown project-gradient-square-size"/>
+        <img src="./art_portfolio.png" class="drop-shadow-xl project-image-position" style=""/>
+        </div>
+        <div v-else>
+          
+          <img src="./art_portfolio.png" class="drop-shadow-xl project-image-position" style=""/>
+        </div>
+        <div class="project-text-container" style="">
+          <h3 style="font-size: 2rem;">Art Portfolio</h3>
+        <p style="font-size:1.5rem; margin-bottom: 2%; margin-top: 8rem; margin-bottom:8rem;">A personal website  I built to host my art.</p>
+        <button class="portfolio-button" @click="routePortfolio">Visit</button>
+        </div>
+      </div>
+      <div class="project-container" style="">
+        <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square-yellow project-gradient-square-size"/>
         <img src="./littleLemon.png" class="drop-shadow-xl project-image-position" style=""/>
         </div>
@@ -69,7 +87,7 @@ export default {
         </div>
         <!-- <div class="diagonal-square" style="flex:40;"></div> -->
         <div class="project-text-container" style="">
-          <h3 style="font-size: 2rem;">Little Lemon React Natice</h3>
+          <h3 style="font-size: 2rem;">Little Lemon React Native</h3>
         <p style="font-size:1.5rem; margin-bottom: 2%;">Little Lemon is a React Native project for the fictional Chicago Restuarant of the same name. This project showcases my abilities to create cross platform mobile applications ( Android and iOS ) from start to finish. From Figma wireframes to authentication and login, rendering restuarant items with asynchronous calls and storing application information in databases sucha s AsyncStorage and SQLite - Little Lemon is a comprehensive application and a testament to my continuous growth in software.</p>
         <button class="portfolio-button" @click="routeLittleLemon">Visit</button>
         </div>
@@ -303,6 +321,27 @@ background: linear-gradient(to right, #CFBE53 0%, #CFFF30 30%, #A4FF54 60%, #82C
     clip-path: polygon(0 0%, 100% 0, 0 100%, 0 100%);
 }
 
+.diagonal-square-brown {
+  position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0%, 100% 0, 0 100%, 0 100%);
+   background: rgb(36,0,0);
+   background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(148,119,31,1) 100%, rgba(0,212,255,1) 100%);
+
+}
+
+.diagonal-square-brown::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+   background: rgb(36,0,0);
+   background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(148,119,31,1) 100%, rgba(0,212,255,1) 100%);
+    clip-path: polygon(0 0%, 100% 0, 0 100%, 0 100%);
+}
 
 .drop-shadow-xl {
     filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
