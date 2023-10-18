@@ -4,10 +4,16 @@ export default {
   data() {
     return { 
       showAbout:false,
+      messageArr: ["", "message 1", "message 2", "message 3"],
+      currentMessage: 0,
+      
      }
   },
   mounted() { },
   methods: {
+    SetMessage(num) {
+
+    }
 },
   };
 </script>
@@ -18,17 +24,46 @@ export default {
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 4%; top: 7%; color: black; border-radius: 1rem; width: 88%; height: 45rem;">
           <div style="display:flex; height: 90%; width: 90%; margin-left: 5%; margin-top: 2.5%;">
-            <div style="flex: 30; background: #fff; width: 100%; height: 100%;"></div>
-            <div style="flex: 70; background: #7d7d7d;; width: 100%; height: 100%;">
-              <div>
-                
+            <div style="flex: 30; background: #fff; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; gap: 0;">
+              <div class="message-box" @click="SetMessage(1)">
+              <p class="message-header">Message from Dr. Ramani</p>
               </div>
+              <div class="message-box" @click="SetMessage(2)">
+              <p class="message-header">Your Test Results</p>
+              </div>
+              <div class="message-box" @click="SetMessage(3)">
+              <p class="message-header">Your Appointment Details</p>
+              </div>
+            </div>
+            <div style="flex: 70; background: #7d7d7d;; width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: flex-start;">
+              <div 
+              class="chat-bubble-med"
+              >
+                <p>{{messageArr[currentMessage]}}</p>
+              </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
-    </div>blueviolet
+    </div>
 </template>
 <style lang="scss">
+.message-header {
+  text-align: center;
+}
+
+.message-box {
+  width: 100%;
+  height: 100%;
+  max-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
 body,
 html {
   height: 100%;
