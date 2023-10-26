@@ -78,22 +78,6 @@ export default {
       </div>
       <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
-        <div class="diagonal-square-yellow project-gradient-square-size"/>
-        <img src="./littleLemon.png" class="drop-shadow-xl project-image-position" style=""/>
-        </div>
-        <div v-else>
-          <!-- <img src="./myhealth.png" class="drop-shadow-xl" style="height:60vh; width:75vw;"/> -->
-          <img src="./littleLemon.png" class="drop-shadow-xl project-image-position" style=""/>
-        </div>
-        <!-- <div class="diagonal-square" style="flex:40;"></div> -->
-        <div class="project-text-container" style="">
-          <h3 style="font-size: 2rem;">Little Lemon React Native</h3>
-        <p style="font-size:1.5rem; margin-bottom: 2%;">Little Lemon is a React Native project for the fictional Chicago Restuarant of the same name. This project showcases my abilities to create cross platform mobile applications ( Android and iOS ) from start to finish. From Figma wireframes to authentication and login, rendering restuarant items with asynchronous calls and storing application information in databases sucha s AsyncStorage and SQLite - Little Lemon is a comprehensive application and a testament to my continuous growth in software.</p>
-        <button class="portfolio-button" @click="routeLittleLemon">Visit</button>
-        </div>
-      </div>
-      <div class="project-container" style="">
-        <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square project-gradient-square-size"/>
         <img src="./myhealth.png" class="drop-shadow-xl project-image-position" style=""/>
         </div>
@@ -120,6 +104,22 @@ export default {
           <h3 style="font-size: 2rem;">C-Collection</h3>
         <p style="font-size:1.5rem; margin-bottom: 2%;">C-collection captivating portfolio project, serving as a delightful homage to the profound impact of media on one's journey of self-discovery. Inspired by the timeless elegance of the Criterion Collection website, this meticulously crafted project offers a unique perspective into the diverse world of books, movies, and other cherished media that have shaped and influenced personal growth. With a keen eye for modern UI aesthetics, the project seamlessly weaves together an artful tapestry of film covers, book artworks, and captivating synopses, providing visitors with an immersive and aesthetically pleasing experience. Journey through an eclectic selection of works that have profoundly resonated with the creator.</p>
         <button class="portfolio-button" @click="routeCC">Visit</button>
+        </div>
+      </div>
+      <div class="project-container" style="">
+        <div v-if="windowWidth > 1360" class="project-image-container" style="">
+        <div class="diagonal-square-yellow project-gradient-square-size"/>
+        <img src="./littleLemon.png" class="drop-shadow-xl project-image-position" style=""/>
+        </div>
+        <div v-else>
+          <!-- <img src="./myhealth.png" class="drop-shadow-xl" style="height:60vh; width:75vw;"/> -->
+          <img src="./littleLemon.png" class="drop-shadow-xl project-image-position" style=""/>
+        </div>
+        <!-- <div class="diagonal-square" style="flex:40;"></div> -->
+        <div class="project-text-container" style="">
+          <h3 style="font-size: 2rem;">Little Lemon React Native</h3>
+        <p style="font-size:1.5rem; margin-bottom: 2%;">Little Lemon is a React Native project for the fictional Chicago Restuarant of the same name. This project showcases my abilities to create cross platform mobile applications ( Android and iOS ) from start to finish. From Figma wireframes to authentication and login, rendering restuarant items with asynchronous calls and storing application information in databases sucha s AsyncStorage and SQLite - Little Lemon is a comprehensive application and a testament to my continuous growth in software.</p>
+        <button class="portfolio-button" @click="routeLittleLemon">Visit</button>
         </div>
       </div>
     </div>

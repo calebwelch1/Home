@@ -16,12 +16,26 @@ export default {
     <div class="dashboard">
         <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Profile</h2>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 4%; top: 7%; color: black; border-radius: 1rem; width: 88%; height: 45rem;">
-            footer
+        style="left: 4%; top: 7%; color: black; border-radius: 1rem; width: 100%; max-width: 200px; height: 45rem;
+        display: flex; flex-direction: column; justify-content: center; padding: 0% 10%;">
+        <span class="material-symbols-outlined" style="color: #545454;">
+                person
+        </span>
+            
         </div>
     </div>
 </template>
 <style lang="scss">
+
+.material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+        font-size: 2rem !important;
+}
+
 body,
 html {
   height: 100%;

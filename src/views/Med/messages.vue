@@ -4,7 +4,7 @@ export default {
   data() {
     return { 
       showAbout:false,
-      messageArr: ["", "message 1", "message 2", "message 3"],
+      messageArr: ["message 0", "message 1", "message 2", "message 3"],
       currentMessage: 0,
       
      }
@@ -45,10 +45,11 @@ export default {
             </div>
             </div>
           </div>
-        </div>
-    </div>
 </template>
 <style lang="scss">
+.chat-bubble-med {
+  
+}
 .message-header {
   text-align: center;
 }
