@@ -98,7 +98,7 @@ export default {
             <!-- chat -->
             <div style="flex: 70; background: #7d7d7d;; width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: flex-start;">
               <div 
-              :class="currentMessageArr.sender === 'health' ? 'chat-bubble health-bubble' : 'chat-bubble patient-bubble'"
+              :class="message.sender === 'health' ? 'chat-bubble health-bubble' : 'chat-bubble patient-bubble'"
               v-for="(message, index) in currentMessageArr" :key="index"
               >
                 <p>{{message.message}}</p>
@@ -151,14 +151,14 @@ export default {
 }
 
 /* Sender's chat bubble */
-.health-bubble {
+.patient-bubble {
   align-self: flex-end;
   background-color: #DCF8C6; /* Bubble background color */
   color: #000; /* Text color */
 }
 
 /* Receiver's chat bubble */
-.patient-bubble {
+.health-bubble {
   align-self: flex-start;
   background-color: #E8E8E8; /* Bubble background color */
   color: #000; /* Text color */
