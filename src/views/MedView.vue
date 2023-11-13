@@ -70,13 +70,13 @@ export default {
                     <span class="material-symbols-outlined position-menu-items">
                         payments
                     </span>
-                    <p class="position-menu-items position-menu-item-p">Benefits</p>
+                    <p class="position-menu-items position-menu-item-p">Billing</p>
                 </li>
                 <li class="menu-item" @click="currentView = 'History'">
                     <span class="material-symbols-outlined position-menu-items">
                         restart_alt
                     </span>
-                    <p class="position-menu-items position-menu-item-p">History</p>
+                    <p class="position-menu-items position-menu-item-p">News</p>
                 </li>
                 <li class="menu-item" @click="currentView = 'Profile'">
                     <span class="material-symbols-outlined position-menu-items">
