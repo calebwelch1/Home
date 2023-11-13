@@ -8,10 +8,14 @@ export default {
       ],
       patientMessages: [],
       messageArr1: [
-      {message: "You have a new result from your recent visit, please visit results to view your information", sender: "health"},
+      {message: "You have a new result from your recent visit, please visit health results to view your information", sender: "health"},
       ],
-      messageArr2: [],
-      messageArr3: [],
+      messageArr2: [
+      {message: "You have a new statement, please visit billing to pay or create a payment plan", sender: "health"},
+      ],
+      messageArr3: [
+      {message: "Our clinic at 555 Hospital St. will be under construction this summer, please visit news to plan ahead for your next visit", sender: "health"},
+      ],
       // messages is array of objects, message: "message", sender: "health" or "patient"
       currentMessage: 0,
       
@@ -21,8 +25,35 @@ export default {
     this.currentMessageArr = this.messageArr1;
   },
   methods: {
-    SetMessage(num: number) {
-
+    SetMessageArr(num: number) {
+      this.RemoveActiveTitles();
+      switch(num){
+        case 1:
+          this.SetActiveTitle(1)
+          this.currentMessageArr = this.messageArr1;
+          break;
+        case 2:
+          this.SetActiveTitle(2)
+          this.currentMessageArr = this.messageArr2;
+          break;
+        case 3:
+          this.SetActiveTitle(3)
+          this.currentMessageArr = this.messageArr3;
+          break;
+        default:
+          this.currentMessageArr = this.messageArr1;
+          break;
+      }
+    },
+    SetActiveTitle(num){
+      const title = document.getElementById(`message-title-${num}`);
+      title!.style.backgroundColor = "#ededed";
+    },
+    RemoveActiveTitles(){
+      for (let i = 1; i < 4; i++){
+      const title = document.getElementById(`message-title-${i}`);
+      title!.style.backgroundColor = "";
+      }
     }
 },
   };
@@ -36,7 +67,7 @@ export default {
           <div style="display:flex; height: 90%; width: 90%; margin-left: 5%; margin-top: 2.5%; gap: 2%;">
             <!-- chat message titles -->
             <div style="flex: 30; background: #fff; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; gap: 0;">
-              <div class="message-box" @click="SetMessage(1)">
+              <div id="message-title-1" class="message-box" @click="SetMessageArr(1)">
                 <div class="icon-text-row">                
                   <span class="material-symbols-outlined" style="margin-right:0.5rem;margin-top:-0.2rem;">
                     chat_bubble
@@ -44,7 +75,7 @@ export default {
                   <p class="message-header">Message from Dr. Ramani</p>
               </div>
               </div>
-              <div class="message-box" @click="SetMessage(2)">
+              <div id="message-title-2" class="message-box" @click="SetMessageArr(2)">
                 <div class="icon-text-row">                
                   <span class="material-symbols-outlined" style="margin-right:0.5rem;margin-top:-0.2rem;">
                     chat_bubble
@@ -52,7 +83,7 @@ export default {
                 <p class="message-header">Your Test Results</p>
                 </div>
               </div>
-              <div class="message-box" @click="SetMessage(3)">
+              <div id="message-title-3" class="message-box" @click="SetMessageArr(3)">
                 <div class="icon-text-row">                
                   <span class="material-symbols-outlined" style="margin-right:0.5rem;margin-top:-0.2rem;">
                     chat_bubble
@@ -64,7 +95,7 @@ export default {
             <!-- chat -->
             <div style="flex: 70; background: #7d7d7d;; width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: flex-start;">
               <div 
-              :class="currentMessageArr.sender === 'health' ? 'healthMessage' : 'patientMessage'"
+              :class="currentMessageArr.sender === 'health' ? 'chat-bubble health-bubble' : 'chat-bubble patient-bubble'"
               v-for="(message, index) in currentMessageArr" :key="index"
               >
                 <p>{{message.message}}</p>
@@ -101,6 +132,33 @@ export default {
 
 .message-box:hover {
   background-color: #ededed
+}
+
+.message-box-active {
+  background-color: #ededed
+}
+
+/* Chat bubble */
+.chat-bubble {
+  background-color: #DCF8C6; /* Bubble background color */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 70%; /* Adjust as needed */
+}
+
+/* Sender's chat bubble */
+.health-bubble {
+  align-self: flex-end;
+  background-color: #DCF8C6; /* Bubble background color */
+  color: #000; /* Text color */
+}
+
+/* Receiver's chat bubble */
+.patient-bubble {
+  align-self: flex-start;
+  background-color: #E8E8E8; /* Bubble background color */
+  color: #000; /* Text color */
 }
 
 body,
