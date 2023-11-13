@@ -1,11 +1,14 @@
 <script lang="ts">
+interface MessageArrType {
+    message: any;
+    sender: string;
+  }
 
 export default {
   data() {
     return { 
       showAbout:false,
-      currentMessageArr: [
-      ],
+      currentMessageArr: [] as MessageArrType[],
       patientMessages: [],
       messageArr1: [
       {message: "You have a new result from your recent visit, please visit health results to view your information", sender: "health"},
@@ -45,7 +48,7 @@ export default {
           break;
       }
     },
-    SetActiveTitle(num){
+    SetActiveTitle(num: number){
       const title = document.getElementById(`message-title-${num}`);
       title!.style.backgroundColor = "#ededed";
     },
