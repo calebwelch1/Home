@@ -4,12 +4,22 @@ export default {
   data() {
     return { 
       showAbout:false,
-      messageArr: ["message 0", "message 1", "message 2", "message 3"],
+      currentMessageArr: [
+      ],
+      patientMessages: [],
+      messageArr1: [
+      {message: "You have a new result from your recent visit, please visit results to view your information", sender: "health"},
+      ],
+      messageArr2: [],
+      messageArr3: [],
+      // messages is array of objects, message: "message", sender: "health" or "patient"
       currentMessage: 0,
       
      }
   },
-  mounted() { },
+  mounted() {
+    this.currentMessageArr = this.messageArr1;
+  },
   methods: {
     SetMessage(num: number) {
 
@@ -54,9 +64,10 @@ export default {
             <!-- chat -->
             <div style="flex: 70; background: #7d7d7d;; width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: flex-start;">
               <div 
-              class="chat-bubble-med"
+              :class="currentMessageArr.sender === 'health' ? 'healthMessage' : 'patientMessage'"
+              v-for="(message, index) in currentMessageArr" :key="index"
               >
-                <p>{{messageArr[currentMessage]}}</p>
+                <p>{{message.message}}</p>
               </div>
               </div>
             </div>
