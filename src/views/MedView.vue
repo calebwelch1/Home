@@ -74,7 +74,7 @@ export default {
                 </li>
                 <li class="menu-item" @click="currentView = 'History'">
                     <span class="material-symbols-outlined position-menu-items">
-                        restart_alt
+                        newspaper
                     </span>
                     <p class="position-menu-items position-menu-item-p">News</p>
                 </li>
