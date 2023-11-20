@@ -1,51 +1,29 @@
 <script lang="ts">
-
+import healthBanner from './healthBanner.png'
 export default {
   data() {
     return { 
       showAbout:false,
+      healthBanner,
      }
   },
   mounted() { },
   methods: {
 },
   };
+  // links to news stories
+  // https://hospitalnews.com/pharmacogenomic-testing-promising-treatment-for-depression/
+  // https://hospitalnews.com/enhancing-the-patient-experience-with-essential-care-partner-programs/
+  // https://hospitalnews.com/treating-high-risk-drinking-alcohol-use-disorder-new-canadian-guideline/
 </script>
 
 <template>
    <div class="dashboard">
-        <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Your Health Statistics</h2>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 10%; width: 18%;">
-
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 24%; top: 10%; width: 18%;">
-        2
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 21%; width: 18%;">
-        3
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 24%; top: 21%; width: 18%;">
-        4
-        </div>
-        <div class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 36%; color: black; border-radius: 1rem; width: 39%; height: 16rem;">
-            big
-        </div>
-        <div class="drop-shadow-xl absolute tag-card"
-        style="left: 50%; top: 10%; color: black; border-radius: 1rem; width: 39%; height: 50%;">
-            big 2
-        </div>
-        <div class="drop-shadow-xl absolute tag-card"
-        style="left: 20%; top: 66%; color: black; border-radius: 1rem; width: 54%; height: 10rem;">
-            footer
+        <img :src="healthBanner" style="max-height: 12rem; max-width: 100%; height: 100%; width: 100%; object-fit: cover;" />
+        <div style="display: flex; flex-direction: row; justify-content: space-between; height: 100%; width: 100%; max-width:100%; max-height:18rem; border: 1px solid red;">
+          <p style="color: black;">image</p>
+          <p style="color: black;">story</p>
+          <p style="color: black;">image</p>
         </div>
     </div>
 </template>
@@ -63,6 +41,7 @@ html {
     width: 100%;
     height: 100%;
     position: relative;
+    overflow-y: scroll;
 }
 
 .container {

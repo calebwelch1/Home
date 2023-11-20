@@ -14,33 +14,13 @@ export default {
 
 <template>
     <div class="dashboard">
-        <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Your Health Statistics</h2>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 10%; width: 18%;">
-        1
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 24%; top: 10%; width: 18%;">
-        2
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 21%; width: 18%;">
-        3
-        </div>
-        <div
-        class="drop-shadow-xl absolute tag-card"
-        style="left: 24%; top: 21%; width: 18%;">
-        4
+      <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Billing</h2>
+        <div class="drop-shadow-xl absolute tag-card"
+        style="left: 3%; top: 10%; color: black; border-radius: 1rem; width: 60%; height: 32rem;">
+            data here
         </div>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 36%; color: black; border-radius: 1rem; width: 39%; height: 16rem;">
-            big
-        </div>
-        <div class="drop-shadow-xl absolute tag-card"
-        style="left: 50%; top: 10%; color: black; border-radius: 1rem; width: 39%; height: 50%;">
+        style="left: 70%; top: 10%; color: black; border-radius: 1rem; width: 20%; height: 50%;">
             big 2
         </div>
         <div class="drop-shadow-xl absolute tag-card"
@@ -63,6 +43,7 @@ html {
     width: 100%;
     height: 100%;
     position: relative;
+    overflow-x: scroll;
 }
 
 .container {
