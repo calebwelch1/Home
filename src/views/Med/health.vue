@@ -22,7 +22,6 @@ export default {
     scheduleOnClick(){
       const schedule = document.getElementById("scheduler")
       schedule!.style.display = "block";
-      schedule.click();
     },
     onChangeDatePicker(){
       console.log('onchange')
