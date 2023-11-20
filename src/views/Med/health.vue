@@ -17,23 +17,58 @@ export default {
 <template>
     <div class="dashboard">
         <!-- <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">HEALTH</h2> -->
+        <!-- <div class="modal drop-shadow-xl"
+        style="top: 2%; left: 2%; height: 100%; width: 100%; max-height: 77vh; max-width:75vw; background: grey; border-radius: 2rem; position: absolute; z-index: 99;"
+        >
+        <div style="display:flex; height: 90%; width: 90%; margin-left: 5%; margin-top: 2.5%; gap: 2%;">
+
+        </div> -->
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 3%; top: 8%; color: black; border-radius: 1rem; width: 40%; height: 25rem; display: flex; flex-direction: column;">
-        <div style="padding-left: 20%">
-        <p style="color: black; font-size: 2rem; margin-bottom: 18%; ">Medications</p>
-        <p style="color: black; font-size: 1.5rem;">Your Pharmacy: Walreds</p>
-        <p style="color: black; font-size: 1.5rem;">medication 1: refill ---</p>
-        <p style="color: black; font-size: 1.5rem;">medication 2: refill ---</p>
-        </div>
+        style="left: 3%; top: 8%; color: black; border-radius: 1rem; width: 40%; height: 25rem; display: flex; flex-direction: column;align-items: center; justify-content: center; padding-left: 1rem;">
+          <div style="display: flex; flex-direction: row; width: 100%; justify-content: center; gap: 2rem;margin-left: auto; margin-right: auto;padding-top: 2rem;">
+              <div style="margin-top:auto; margin-bottom: auto;" class="cursor">
+                <span class="material-symbols-outlined" style="font-size: 2rem !important; color: red; margin-left: 0%; margin-top: 2%;">
+                  phone_in_talk
+                </span>
+                <p style="color:red">call</p>
+              </div>
+              <div>
+                <p style="color: black; font-size: 2rem; margin-bottom: 4%; margin-top: -3rem; margin-right: -1rem; text-align: center;">Your Pharmacy</p>
+                <span class="material-symbols-outlined" style="font-size: 8rem !important; color: red; margin-left: 22%; margin-right: auto; margin-top: 2%; text-align: center;">
+                local_pharmacy
+                </span>
+                <p style="color: black; font-size: 1.5rem;"></p>
+                <p style="color: black; font-size: 1.5rem; text-align:center; margin-top: 1rem;">Walreds</p>
+              </div>
+              <div style="margin-top:auto; margin-bottom: auto; display: flex; flex-direction: column;" class="cursor">
+                <span class="material-symbols-outlined" style="font-size: 2rem !important; color: red; margin-left: auto; margin-right: auto; margin-top: 2%;">
+                  pill
+                </span>
+                <p style="color:red">medications</p>
+              </div>
+            </div>
         </div>
         <div class="drop-shadow-xl absolute tag-card"
-        style="left: 47%; top: 8%; color: black; border-radius: 1rem; width: 42%; height: 25rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div style="padding-left: 5%">
-            <p style="color: black; font-size: 2rem; margin-bottom: 18%; ">Your Doctor</p>
-            <img :src="doctor" style="height: 100%; width: 100%; max-height: 150px; max-width: 200px;"/>
-            <p style="color: black; font-size: 1.5rem;"></p>
-            <p style="color: black; font-size: 1.5rem;">Dr. Kalimisetty</p>
-            <p style="color: black; font-size: 1.5rem;">Make an appointment</p>
+        style="left: 47%; top: 8%; color: black; border-radius: 1rem; width: 41%; height: 25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-left: 1rem;">
+            <div style="display: flex; flex-direction: row; width: 100%; justify-content: center; gap: 2rem;margin-left: auto; margin-right: auto;">
+              <div style="margin-top:auto; margin-bottom: auto;" class="cursor">
+                <span class="material-symbols-outlined" style="font-size: 2rem !important; color: red; margin-left: 0%; margin-top: 2%;">
+                  phone_in_talk
+                </span>
+                <p style="color:red">call</p>
+              </div>
+              <div>
+                <p style="color: black; font-size: 2rem; margin-bottom: 4%; margin-top: -3rem; text-align: center;">Your Doctor</p>
+                <img :src="doctor" class="round-avatar" style="height: 100%; width: 100%; max-height: 200px; max-width: 200px; border: 2px solid grey;"/>
+                <p style="color: black; font-size: 1.5rem;"></p>
+                <p style="color: black; font-size: 1.5rem; text-align:center; margin-top: 1rem;">Dr. Ramani</p>
+              </div>
+              <div style="margin-top:auto; margin-bottom: auto; display: flex; flex-direction: column;" class="cursor">
+                <span class="material-symbols-outlined" style="font-size: 2rem !important; color: red; margin-left: auto; margin-right: auto; margin-top: 2%;">
+                  calendar_month
+                </span>
+                <p style="color:red">schedule</p>
+              </div>
             </div>
         </div>
         <div class="drop-shadow-xl absolute tag-card"
@@ -122,6 +157,11 @@ html {
     border-radius: 1rem;
     width: 18rem;
     height: 5rem;
+}
+
+.round-avatar {
+  border-radius: 50%; /* Make the element round */
+  object-fit: cover; /* Preserve aspect ratio and cover the entire element */
 }
 
 .material-symbols-outlined {

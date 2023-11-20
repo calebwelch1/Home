@@ -132,6 +132,9 @@ html {
   overflow: hidden;
 }
 
+.cursor {
+    cursor: pointer;
+}
 p {
     margin: 0px;
 }
