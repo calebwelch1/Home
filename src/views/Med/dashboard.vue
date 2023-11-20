@@ -143,10 +143,10 @@ export default {
             </div>
             <p style="position: absolute; z-index:10; top: -1%; left: 10%; color:#5d5d5d; font-weight: 600;">Create your account</p>
             <p style="position: absolute; z-index:10; top: 12%; left: 10%; color:#3b3b3b; font-weight: 600;">Connect a source</p>
-            <p style="position: absolute; z-index:10; top: 22%; left: 10%; color:#787878; font-size: 1.2rem;">Lorem ipsum dolor consceptor idipsing <br> al tim et. inseptim qalmri setentum <br> quaranme recept limori</p>
+            <p style="position: absolute; z-index:10; top: 22%; left: 10%; color:#787878; font-size: 1.2rem;">Connecting a source can be as easy as <br> connecting your bank account be sure to <br> also add a backup payment option</p>
             <button class="green-gradient" style="position: absolute; z-index:10; top: 45%; left: 10%; color: #fff; width: 38%; height: 12%; border-radius: 0.5rem; font-size: 1.1rem; font-weight: 600; border: none;">Connect</button>
-            <p style="position: absolute; z-index:10; top: 68%; left: 10%; color:#787878; font-size: 1.2rem;">Lorem ipsum dolor consceptor idipsing</p>
-            <p style="position: absolute; z-index:10; top: 84%; left: 10%; color:#787878; font-size: 1.2rem;">At vero eos et accusamus et iusto odio <br> dignissimos ducimus qui blanditiis praesentium </p>
+            <p style="position: absolute; z-index:10; top: 68%; left: 10%; color:#787878; font-size: 1.2rem;">Add Health Insurance Information</p>
+            <p style="position: absolute; z-index:10; top: 84%; left: 10%; color:#787878; font-size: 1.2rem;">Complete your profile by making <br>sure you have the correct pharmacy <br> and back-up phone number </p>
           </div>
         </div>
         <div class="drop-shadow-xl absolute tag-card"
