@@ -1,9 +1,47 @@
 <script lang="ts">
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js'
+import { Line } from 'vue-chartjs'
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
 
 export default {
+  components: {
+    Line,
+  },
   data() {
     return { 
       showAbout:false,
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [40, 39, 10, 40, 39, 80, 40]
+          }
+        ]
+      },
+      options: {
+      responsive: true,
+      maintainAspectRatio: false
+    },
      }
   },
   mounted() { },
@@ -17,11 +55,11 @@ export default {
       <h2 style="color: black; font-size: 2.5rem; margin-left: 2.5rem; margin-top: 0px;">Billing</h2>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 3%; top: 10%; color: black; border-radius: 1rem; width: 60%; height: 32rem;">
-            data here
+          <Line :data="data" :options="options" />
         </div>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 70%; top: 10%; color: black; border-radius: 1rem; width: 20%; height: 50%;">
-            big 2
+            {{options}}
         </div>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 20%; top: 66%; color: black; border-radius: 1rem; width: 54%; height: 10rem;">
