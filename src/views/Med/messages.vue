@@ -98,10 +98,18 @@ export default {
             <!-- chat -->
             <div style="flex: 70; background: #7d7d7d;; width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: flex-start;">
               <div 
-              :class="message.sender === 'health' ? 'chat-bubble health-bubble' : 'chat-bubble patient-bubble'"
-              v-for="(message, index) in currentMessageArr" :key="index"
+              style="flex:85;"
               >
-                <p>{{message.message}}</p>
+                <div
+                :class="message.sender === 'health' ? 'chat-bubble health-bubble' : 'chat-bubble patient-bubble'"
+                v-for="(message, index) in currentMessageArr" :key="index"
+                >
+                  <p>{{message.message}}</p>
+                </div>               
+              </div>
+              <div style="flex: 15; display: flex; flex-direction:row;">
+                <input style="flex:80" />
+                <button style="flex:20">Send</button>
               </div>
               </div>
             </div>
@@ -148,6 +156,8 @@ export default {
   padding: 10px;
   margin: 10px;
   max-width: 70%; /* Adjust as needed */
+  max-height: 40%;
+  height: 100%;
 }
 
 /* Sender's chat bubble */

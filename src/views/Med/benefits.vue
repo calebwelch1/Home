@@ -59,7 +59,7 @@ export default {
         </div>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 70%; top: 10%; color: black; border-radius: 1rem; width: 20%; height: 50%;">
-            {{options}}
+           health care
         </div>
         <div class="drop-shadow-xl absolute tag-card"
         style="left: 20%; top: 66%; color: black; border-radius: 1rem; width: 54%; height: 10rem;">
