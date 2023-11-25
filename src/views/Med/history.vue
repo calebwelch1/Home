@@ -32,8 +32,12 @@ export default {
   },
   mounted() { },
   methods: {
-  openInNewTab(url) {
-    window.open(url, '_blank').focus();
+  openInNewTab(url: string) {
+    const w = window.open(url, '_blank');
+    if (w) {
+        w.focus(); // okay now
+    }
+    // window.open(url, '_blank').focus();
   },
 },
   };
