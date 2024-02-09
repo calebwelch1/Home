@@ -68,7 +68,7 @@ export default {
         </div>
         <div v-else>
           
-          <img src="./art_portfolio.png" class="drop-shadow-xl project-image-position" style=""/>
+          <img src="./art_portfolio.png" class="drop-shadow-xl" style="height:60vh; width:75vw; display:block;"/>
         </div>
         <div class="project-text-container" style="">
           <h3 style="font-size: 2rem;">Art Portfolio</h3>
@@ -113,7 +113,7 @@ export default {
         </div>
         <div v-else>
           <!-- <img src="./myhealth.png" class="drop-shadow-xl" style="height:60vh; width:75vw;"/> -->
-          <img src="./littleLemon.png" class="drop-shadow-xl project-image-position" style=""/>
+          <img src="./littleLemon.png" class="drop-shadow-xl project-image-position-lemon" style="height:60vh; width:75vw;"/>
         </div>
         <!-- <div class="diagonal-square" style="flex:40;"></div> -->
         <div class="project-text-container" style="">
@@ -152,6 +152,21 @@ html {
   z-index: 5; height: 75%; width: 80%; position: absolute; bottom: -5%; right: -3%;
 }
 
+// .project-image-position-lemon {
+//   z-index: 5; height: 75%; width: 80%; position: absolute; bottom: -5%; right: -3%;
+
+//   @media screen and (max-width: 1350px){
+//     display:none;
+//   }
+// }
+
+// @media only screen and (max-width: 1350px) {
+//   .project-image-position {
+//     // background-color: lightblue;
+//   z-index: 5; height: 75%; width: 40%; position: absolute; bottom: -5%; right: -3%;
+//   }
+// }
+
 .project-gradient-square-size {
   position:absolute; flex: 40; height: 100%; width: 100%;
 }
@@ -166,7 +181,7 @@ html {
 
 @media (max-width: 1360px) {
   .project-container {
-  display: flex; flex-direction: column; justify-content: space-between; gap: 5vw; margin-top: 2%; margin-bottom: 2%; width: 80%; margin-left: auto; margin-right: auto; font-size: 1.3rem; height: 100rem;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 5vw; margin-top: 2%; margin-bottom: 2%; width: 40%; margin-left: 5%; margin-right: 5%; font-size: 1.3rem; height: 100rem;
 }
 
 .project-image-container {
@@ -174,7 +189,7 @@ html {
 }
 
 .project-text-container {
-  display: flex; flex-direction: column; justify-content: space-between;
+  display: flex; flex-direction: column; justify-content: space-between; width: 80vw;
 }
 
 .project-image-position {
