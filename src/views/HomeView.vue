@@ -28,6 +28,9 @@ export default {
     routeLittleLemon() {
       window.open('https://github.com/calebwelch1/little-lemon-react-native'); 
     },
+    routeCoinGet() {
+      window.open('https://calebwelch1.github.io/CoinGetBlazor/'); 
+    },
   },
   };
 </script>
@@ -47,10 +50,10 @@ export default {
     <div style="pointer-events: none;" class="item crossed-out-blur">Fast & Slow</div>
   </div> -->
   <div class="portfolio-container">
-    <div class="portfolio-header">
-      <div style="margin-left: auto; margin-right: auto; display:flex; flex-direction:column;">
+    <div class="portfolio-header" style="height: 30vh;">
+      <div style="margin-left: auto; margin-right: auto; display:flex; flex-direction:column; padding-bottom:1rem;">
         <h1 style="font-size:5.5rem; margin-bottom: 5px;">HOME</h1>
-        <div style="display:flex; flex-direction: row;">
+        <div style="display:flex; flex-direction: row; margin-bottom:1rem;">
           <p style="font-size:1.1rem; margin-left:auto; margin-right: auto;">projects by
           <a style="color:white; margin:none;padding:none; height: 1rem;" href="https://calebwelch1.github.io/portfolio/">Caleb Welch</a>
           </p>
@@ -60,7 +63,22 @@ export default {
         </div> -->
       </div>
     </div>
-    <div style=" background: white; display: flex; flex-direction: column; height: 78vh; overflow-y: scroll; overflow-x:hidden;">
+    <div style=" background: white; display: flex; flex-direction: column; height: 76vh; overflow-y: scroll; overflow-x:hidden;">
+        <div class="project-container" style="">
+        <div v-if="windowWidth > 1360" class="project-image-container" style="">
+        <div class="diagonal-square-yellow project-gradient-square-size"/>
+        <img src="./coinget.png" class="drop-shadow-xl project-image-position" style=""/>
+        </div>
+        <div v-else>
+          
+          <img src="./coinget.png" class="drop-shadow-xl" style="height:60vh; width:75vw; display:block;"/>
+        </div>
+        <div class="project-text-container" style="">
+          <h3 style="font-size: 2rem;">CoinGet</h3>
+        <p style="font-size:1.5rem; margin-bottom: 2%; margin-top: 8rem; margin-bottom:8rem;">A C# .NET Blazor app that retrieves current crypto prices and displays them similar to Coinbase</p>
+        <button class="portfolio-button" @click="routeCoinGet">Visit</button>
+        </div>
+      </div>
       <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square-brown project-gradient-square-size"/>
