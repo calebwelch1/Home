@@ -31,6 +31,9 @@ export default {
     routeCoinGet() {
       window.open('https://calebwelch1.github.io/CoinGetBlazor/'); 
     },
+    routeCareerAI() {
+      window.open('https://rg-resume-strategist-hmepdehzgud9bdb5.canadaeast-01.azurewebsites.net/'); 
+    }
   },
   };
 </script>
@@ -64,6 +67,23 @@ export default {
       </div>
     </div>
     <div style=" background: white; display: flex; flex-direction: column; height: 76vh; overflow-y: scroll; overflow-x:hidden;">
+      <!-- Career advice AI -->
+        <div class="project-container" style="">
+        <div v-if="windowWidth > 1360" class="project-image-container" style="">
+        <div class="diagonal-square-blue project-gradient-square-size"/>
+        <img src="./azure_career_ai.png" class="drop-shadow-xl project-image-position" style=""/>
+        </div>
+        <div v-else>
+          <img src="./azure_career_ai.png" class="drop-shadow-xl" style="height:60vh; width:75vw;  display:block;"/>
+        </div>
+        <!-- <div class="diagonal-square" style="flex:40;"></div> -->
+        <div class="project-text-container" style="">
+          <h3 style="font-size: 2rem;">Career Strategist AI</h3>
+        <p style="font-size:1.5rem; margin-bottom: 2%;">A C# blazor app that communicates with a custom AI built and hosted on Azure OpenAI that gives career advice and strategy</p>
+        <button class="portfolio-button" @click="routeCareerAI">Visit</button>
+        </div>
+      </div>
+      <!-- CoinGet -->
         <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square-yellow project-gradient-square-size"/>
@@ -79,6 +99,7 @@ export default {
         <button class="portfolio-button" @click="routeCoinGet">Visit</button>
         </div>
       </div>
+      <!-- Art portfolio -->
       <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square-brown project-gradient-square-size"/>
@@ -94,6 +115,7 @@ export default {
         <button class="portfolio-button" @click="routePortfolio">Visit</button>
         </div>
       </div>
+      <!-- MyHealth -->
       <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square project-gradient-square-size"/>
@@ -109,6 +131,7 @@ export default {
         <button class="portfolio-button" @click="$router.push('med')">Visit</button>
         </div>
       </div>
+      <!-- C-Collection -->
       <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square-blue project-gradient-square-size"/>
@@ -124,6 +147,7 @@ export default {
         <button class="portfolio-button" @click="routeCC">Visit</button>
         </div>
       </div>
+      <!-- Little Lemon -->
       <div class="project-container" style="">
         <div v-if="windowWidth > 1360" class="project-image-container" style="">
         <div class="diagonal-square-yellow project-gradient-square-size"/>
